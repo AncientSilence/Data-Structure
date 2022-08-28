@@ -55,7 +55,6 @@ T remove(int index){
 }
 
 
-
 int main(){
 	cout << "Compiled" << endl;
 	Array_List<char> arr;
