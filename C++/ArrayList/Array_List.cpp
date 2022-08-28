@@ -1,5 +1,8 @@
 #include "Array_List.h"
 #define INITIAL_CAPACITY 10;
+
+using namespace std;
+
 template<class T> Array_List<T>::Array_List(){
 	size = 0;
 	capacity = INITIAL_CAPACITY;
@@ -45,6 +48,12 @@ template<class T>
 void reallocate(){
 	
 }
+
+template<class T>
+T remove(int index){
+	return nullptr;
+}
+
 
 
 int main(){

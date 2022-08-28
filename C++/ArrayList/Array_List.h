@@ -1,14 +1,12 @@
 #include <iostream>
 
-using namespace std;
-
 template<class T> struct Array_List{
 	private:
 		int size;
 		int capacity;
 		T * array_list;
 	public:
-	    Array_List();
+		Array_List();
 		Array_List(int capacity);
 	    T get(int index);
 		void set(int index, T item);
