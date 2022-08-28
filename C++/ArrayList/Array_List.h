@@ -6,7 +6,7 @@ template<class T> struct Array_List{
 		int capacity;
 		T * array_list;
 	public:
-	    Array_List();
+		Array_List();
 		Array_List(int capacity);
 	    T get(int index);
 		void set(int index, T item);
