@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 template<class T> struct Array_List{
 	private:
 		int size;
