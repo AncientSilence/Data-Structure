@@ -72,17 +72,22 @@ void Array_List<T>::reallocate(){
 	
 }
 
-
 template<class T>
 T remove(int index){
 	return nullptr;
 }
 
+template<class T>
+void Array_List<T>::print(){
+	for (int i = 0 ; i < 10; ++i){
+		cout << array_list[i] << endl;;
+	}
+}
 
 int main(){
 	cout << "Compiled" << endl;
 	Array_List<char> arr;
 	arr.set(0, 'd');
-	cout <<  arr[2] << endl;
+	arr.print();
 	return 0;
 }

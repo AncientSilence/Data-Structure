@@ -18,7 +18,7 @@ template<class T> struct Array_List{
 		void add(int index, T item);
 		void add(T item);
 		T remove(int index);
-		//TODO: a toString implementation	
+		void print();	
 		//Theory: overload the [] allows Array_List to directly access its array contents
 		T& operator[](int index)
 		{
