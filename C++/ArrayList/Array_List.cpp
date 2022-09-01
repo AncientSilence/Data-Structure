@@ -72,7 +72,7 @@ void Array_List<T>::add(T item){
 }
 
 template<class T>
-bool Array_List<T>::search(T item){
+int Array_List<T>::search(T item){
 	for(int i = 0 ; i < Array_List<T>::get_size(); i++){
 		if(Array_List<T>::get(i) == item){
 			return i;

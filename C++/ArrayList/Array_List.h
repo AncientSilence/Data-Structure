@@ -11,7 +11,7 @@ template<class T> struct Array_List{
 		~Array_List();
 	    T get(int index);
 		void set(int index, T item);
-		bool search(T item);
+		int search(T item);
 		int get_size();
 		int get_capacity();
 		void reallocate();
