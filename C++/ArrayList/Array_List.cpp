@@ -91,7 +91,7 @@ void Array_List<T>::reallocate(){
 		temporary[i] = Array_List<T>::array_list[i];
 	}
 	//take out the original pointer before assign a new one a.k.a cleaning garbage
-	delete Array_List<T>::array_list;
+	delete [] Array_List<T>::array_list;
 	//create a new array from the original array with tripled the original capacity
 	Array_List<T>::capacity = Array_List::get_capacity() * 3;
 	Array_List<T>::array_list = new T[Array_List::get_capacity()];
@@ -100,7 +100,8 @@ void Array_List<T>::reallocate(){
 		Array_List<T>::array_list[i] = temporary[i];
 	}
 	//delete the temporary array
-	delete temporary;
+	delete [] temporary;
+	temporary = NULL;
 }
 
 template<class T>
