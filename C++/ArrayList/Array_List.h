@@ -8,12 +8,12 @@ template<class T> struct Array_List{
 	public:
 		Array_List();
 		Array_List(int capacity);
+		~Array_List();
 	    T get(int index);
 		void set(int index, T item);
 		bool search(T item);
 		int get_size();
 		int get_capacity();
-		int index_of(T item);
 		void reallocate();
 		void add(int index, T item);
 		void add(T item);
