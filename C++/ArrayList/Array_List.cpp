@@ -7,15 +7,15 @@
 using namespace std;
 
 template<class T> Array_List<T>::Array_List(){
-	size = 0;
-	capacity = INITIAL_CAPACITY;
-	array_list = new T[capacity];
+	Array_List<T>::size = 0;
+	Array_List<T>::capacity = INITIAL_CAPACITY;
+	Array_List<T>::array_list = new T[capacity];
 }
 
 template<class T> Array_List<T>::Array_List(int _capacity){
-	size = 0;
-	capacity = _capacity;
-	array_list = new T[capacity];
+	Array_List<T>::size = 0;
+	Array_List<T>::capacity = _capacity;
+	Array_List<T>::array_list = new T[capacity];
 }
 
 template<class T> 
