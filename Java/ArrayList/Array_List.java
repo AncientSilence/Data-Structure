@@ -130,6 +130,9 @@ public class Array_List<E>{
 				++counter;
 			}
 		}
+		if(counter == 0 ){
+			return;
+		}
 		//create a new array with the length of items that is not null
 		E[] array = (E[]) new Object[counter];
 		for(int i = 0 ; i < counter ; i++){
