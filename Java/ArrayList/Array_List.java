@@ -158,7 +158,6 @@ public class Array_List<E>{
 		al.remove(new Integer(20));
 		al.remove();
 		al.chop();
-		//System.out.println(al.toString() + "\t\n Size After Chop: " + al.size );
 		System.out.println(al.existed(null));
 	}
 }
