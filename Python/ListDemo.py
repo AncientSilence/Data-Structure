@@ -1,0 +1,2 @@
+#In Python, there is no native array or "built-in support for Arrays" (https://www.w3schools.com/python/python_arrays.asp)
+#Instead, we have List, which is similar to std::vector<T> in C++ and ArrayList<E> in Java. In this program, we can demo how a List data structure works
