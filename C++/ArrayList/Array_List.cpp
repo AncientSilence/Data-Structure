@@ -1,6 +1,6 @@
 #include "Array_List.h"
 #include <stdexcept>
-
+#include <iostream>
 
 #define INITIAL_CAPACITY 10;
 
@@ -141,9 +141,7 @@ int main(){
 	arr_int.print(); //0 will be removed from the list
 	arr_int.remove(arr_int.get_size() - 1);
 	arr_int.print(); //19 will be remove
-	
-	
-	
+		
 	for(int i = 0 ; i < current_capacity * 2 + 6; i++){
 		char x = 97 + i ; //genrating character a to z
 		arr_char.add(x);

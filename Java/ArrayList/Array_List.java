@@ -140,7 +140,8 @@ public class Array_List<E>{
 		}
 		//point the array_list to the new array and let Java handles the garbage collection
 		this.array_list = array;
-		this.size = array.length;
+		this.size = this.capacity = array.length;
+		
 	}
 	
 	@Override
@@ -154,13 +155,19 @@ public class Array_List<E>{
 	
 	public static void main(String [] args){
 		System.out.println("ArrayList");
-		Array_List<Integer> al = new Array_List<>();
-		for(int i = 0 ; i < 20; i++){
+		Array_List<Integer> al = new Array_List<>();		
+		//add up to double to capacity to check if add and reallocate function work as intended
+		int current_capacity = al.get_capacity();
+		for(int i = 0 ; i < current_capacity * 2; i++){
 			al.add(i * 2);
 		}
-		al.remove(new Integer(20));
+		//remove the last item and a specified item
+		Integer to_remove = new Integer(10);
+		al.remove(to_remove);
 		al.remove();
+		//check if the array is reduced down to the number of item
 		al.chop();
 		System.out.println(al.existed(null));
+		System.out.println(al.toString());
 	}
 }
