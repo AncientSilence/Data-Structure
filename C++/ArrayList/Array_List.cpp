@@ -1,5 +1,7 @@
 #include "Array_List.h"
 #include <stdexcept>
+
+
 #define INITIAL_CAPACITY 10;
 
 using namespace std;
@@ -126,12 +128,32 @@ void Array_List<T>::print(){
 }
 
 int main(){
-	Array_List<int> arr;
-	for(int i = 0; i < 12;i++){
-		arr.add(i);
+	Array_List<int> arr_int;
+	Array_List<char> arr_char;
+	int current_capacity = arr_int.get_capacity();
+	
+    //Add the amount of items to the array_list to check if reallocate and add work correctly
+	for(int i = 0 ; i < current_capacity * 2; i++){
+		arr_int.add(i);
 	}
-	int t = arr.remove(1);
-	arr.print();
-
+	arr_int.print(); 
+	arr_int.remove(0);
+	arr_int.print(); //0 will be removed from the list
+	arr_int.remove(arr_int.get_size() - 1);
+	arr_int.print(); //19 will be remove
+	
+	
+	
+	for(int i = 0 ; i < current_capacity * 2 + 6; i++){
+		char x = 97 + i ; //genrating character a to z
+		arr_char.add(x);
+	}
+	arr_char.print();
+	//Remove item at certain index
+	arr_char.remove(0);
+	arr_char.print(); //'a' will be removed from the list
+	arr_char.remove(arr_char.get_size() - 1);
+	arr_char.print(); //'z' will be remove
+	
 	return 0;
 }
