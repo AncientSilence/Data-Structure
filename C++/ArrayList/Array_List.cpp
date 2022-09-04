@@ -20,7 +20,9 @@ template<class T> Array_List<T>::Array_List(int _capacity){
 template<class T>Array_List<T>::~Array_List(){
 	Array_List<T>::size = 0;
 	Array_List<T>::capacity = 0;
-	delete Array_List<T>::array_list;
+	delete [] Array_List<T>::array_list;
+	Array_List<T>::array_list = NULL;
+	
 }
 
 template<class T> 
