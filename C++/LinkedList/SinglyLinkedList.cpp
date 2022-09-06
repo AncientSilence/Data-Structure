@@ -17,6 +17,13 @@ SinglyLinkedList<T>::~SinglyLinkedList(){
 }
 
 template<class T>
+Node<T> * SinglyLinkedList<T>::get_node(int index){
+	
+	Node<T> * temp = this->head;
+	return temp;
+}
+
+template<class T>
 int SinglyLinkedList<T>::get_size(){
 		return this->size;
 }
@@ -66,6 +73,7 @@ int main(){
 	cout << "Compiled" << endl;
 	//initialize a node
 	Node<int> * a = new Node<int>(100);
-	cout << a->data << endl;
+	SinglyLinkedList<char> list;
+	cout << "Size: " << list.get_size() << endl;
 	return 0;
 }

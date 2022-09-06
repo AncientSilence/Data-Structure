@@ -22,6 +22,7 @@ template<class T>struct SinglyLinkedList{
 	    SinglyLinkedList();
 		~SinglyLinkedList();
 		void set(int index, T item);
+		Node<T> * get_node(int index);
 		T get(int index);
 		int get_size();
 		void add(int index, T item);
