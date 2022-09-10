@@ -1,5 +1,5 @@
 #TODO: Implement a linked list in Python
-
+from Node import Node
 class LinkedList:
     def __init__(self, head, size):
         self.head = None
@@ -92,13 +92,7 @@ class LinkedList:
             node = node.next_ptr
         string += "NULL"
         return string
-    
-class Node:
-    def __init__(self, data, next_ptr):
-        self.data = data
-        self.next_ptr = None
-    def print_str(self):
-        print(self.data, self.next_ptr.data, self.next_ptr is None)
+
         
 e = Node(1, None)
 e1 = Node(2, None)
