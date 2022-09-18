@@ -141,6 +141,10 @@ public class DoublyLinkedList<E>{
 		return this.remove(this.search(item));
 	}
 	
+	public E remove_at_tail(){
+		return this.remove(this.size - 1);
+	}
+	
 	public String to_string(){
 		StringBuilder sb = new StringBuilder();
 		Node<E> current = this.head;
@@ -170,6 +174,6 @@ public class DoublyLinkedList<E>{
 		dl.remove(dl.get_size() - 1);
 		dl.remove(new Character('r'));
 		System.out.println(dl.to_string());
-		System.out.println(dl.search('r'));
+		System.out.println(dl.get(0));
 	}
 }
