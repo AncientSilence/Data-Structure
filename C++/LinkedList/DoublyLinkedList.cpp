@@ -112,12 +112,12 @@ int DoublyLinkedList<T>::search(T item){
 
 template<class T>
 T DoublyLinkedList<T>::remove(int index){
-	//1. Invalid Index
+	//1. Invalid Index or list is empty
 	//2. Remove the last item in the list
 	//3. Remove the head
 	//4. Remove the tail
 	//5. Remove any position between head and tail
-	if(index < 0 || index >= this->size){
+	if(index < 0 || this->size == 0|| index >= this->size){
 		throw std::invalid_argument("Invald arguments");
 	}
 	T to_return = this->get(index);
