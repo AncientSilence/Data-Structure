@@ -14,7 +14,8 @@ SinglyLinkedList<T>::SinglyLinkedList(){
 template<class T>
 SinglyLinkedList<T>::~SinglyLinkedList(){
 	Node<T> * current = nullptr;
-	while(current){
+	
+	while(this->head != nullptr){
 		current = this->head;
 		this->head = this->head->next;
 		delete current;
