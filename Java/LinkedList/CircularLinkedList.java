@@ -111,7 +111,7 @@ public class CircularLinkedList<E>{
 			this.tail = before_tail;	
 		}else{
 			CNode<E> before = this.get_node(index - 1);
-			before = before.next;
+			before.next = before.next.next;
 		}
 		this.size--;
 		return item;

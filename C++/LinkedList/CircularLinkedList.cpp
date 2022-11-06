@@ -76,7 +76,7 @@ void CircularLinkedList<T>::add(int index, T item){
 	}else if(index == 0){
 		holder->next = this->head;
 		this->head = holder;
-	}else if(index == size){
+	}else if(index == this->size){
 		holder->next = this->head;
 		this->tail->next = holder;
 		this->tail = holder;
@@ -134,8 +134,8 @@ T CircularLinkedList<T>::remove(int index){
 		before_tail->next = this->tail->next;
 		this->tail = before_tail;	
 	}else{
-		CNode<T> * before = this->get_node(index);
-		before = before->next;
+		CNode<T> * before = this->get_node(index - 1);
+		before->next = before->next->next;
 	}
 	this->size--;
 	return to_return;
