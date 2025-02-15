@@ -20,6 +20,8 @@ public class Array_List<E>{
 		this.capacity = capacity;
 		this.array_list = (E[]) new Object[this.capacity];
 	}
+
+	//return the how many items currently in the array list
 	public int get_size(){
 		return this.size;
 	}
