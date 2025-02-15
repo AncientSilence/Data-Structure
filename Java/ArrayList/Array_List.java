@@ -26,6 +26,7 @@ public class Array_List<E>{
 		return this.size;
 	}
 	
+	//return the current capacity
 	public int get_capacity(){
 		return this.capacity;
 	}
